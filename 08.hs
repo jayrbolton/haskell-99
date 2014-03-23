@@ -19,7 +19,6 @@ Example in Haskell:
 
 module Eight (compress) where
 
-compress [] = []
 compress (x:[]) = [x]
 compress (x:y:xs)
 	| x == y = compress (y:xs)
