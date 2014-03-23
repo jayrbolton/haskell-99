@@ -19,22 +19,8 @@ Example in Haskell:
 
 module Eight (compress) where
 
-within _ [] = False
-within elem (x:xs)
-	| elem == x = True
-	| otherwise = within elem xs
-
--- within x xs = length [y | y <- xs, y == x] > 0
-
-compress xs = rec [] xs
-	where
-	rec ys [] = ys
-	rec ys (x:xs)
-		| x `within` ys = rec ys xs 
-		| otherwise = rec (ys ++ [x]) xs
-
-compress' ls = foldl check [] ls
-	where
-	check xs x
-	 | x `within` xs = xs
-	 | otherwise = xs ++ [x]
+compress [] = []
+compress (x:[]) = [x]
+compress (x:y:xs)
+	| x == y = compress (y:xs)
+	| otherwise = x:(compress (y:xs))

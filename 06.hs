@@ -21,14 +21,14 @@ isPalindrome xs = xs == reverse xs
 
 isPalindrome' xs =
 	let halved = length xs `div` 2
-	    first = take (1 + halved) xs
-	    last = reverse (drop halved xs)
+			first = take (1 + halved) xs
+			last = reverse (drop halved xs)
 	in first == last
 
 isPalindrome'' xs = rec 0 (length xs - 1)
 	where
 	rec x y 
-	  | x == y = True
+		| x == y = True
 		| xs !! x == xs !! y = rec (x + 1) (y - 1)
 		| otherwise = False
 
@@ -50,14 +50,14 @@ x y 1 2 3 x +
 is_palindrome' xs =
 	0 xs length 1 - rec
 	rec x y = 
-		| x y eq?                   = True
+		| x y eq?										= True
 		| xs x index xs y index eq? = x 1 + y 1 - rec
-		| otherwise                 = False
+		| otherwise									= False
 
 rec x y
-	| x y eq?                   = True
+	| x y eq?										= True
 	| xs x index xs y index eq? = x 1 + y 1 - rec
-	| otherwise                 = False
+	| otherwise									= False
 
 0 xs len 1 - rec
 
