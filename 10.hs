@@ -21,3 +21,9 @@ import Nine (pack)
 encode xs = map (tuple_compose head length) $ pack xs
 
 tuple_compose f0 f1 = \x -> (f0 x, f1 x)
+
+{-
+xs encode = xs pack map | tuple_compose head length
+
+x tuple_compose f0 f1 = (x f0, x f1)
+-}

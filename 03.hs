@@ -30,3 +30,17 @@ elementAt' ls i = count ls 1
 elementAt'' (x:xs) 1 = x
 elementAt'' (x:xs) i = elementAt'' xs (i - 1)
 elementAt'' _ _ = error "Index out of bounds"
+
+{-
+xs elem_at i = xs ! | i - 1
+
+xs elem_at' i =
+	Node x xs | count_from n =
+		? i = n | x
+		? else  | xs count | n + 1
+	xs count_from 1
+
+Node x xs | elem_at'' 1 = x
+Node x xs | elem_at'' i = xs elem_at'' | i - 1
+_ elem_at'' _ = system error "Index out of bounds"
+-}

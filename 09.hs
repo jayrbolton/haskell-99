@@ -23,3 +23,12 @@ pack xs = foldr f [] xs
 	f y (x:xs)
 		| y == head x = (y:x):xs
 		| otherwise = [y]:x:xs
+
+{-
+xs pack =
+	[] fun y = [[y]]
+	x:xs fun y =
+		case | y eq? | x head => y:x:|xs
+		else                  => [y]:x:xs
+	xs foldr fun []
+-}

@@ -29,3 +29,19 @@ myLength''' xs = sum $ map (const 1) xs
 
 -- my favorite:
 myLength'''' = fst . last . zip [1..]
+
+{-
+xs len = xs length
+
+xs len' =
+	Empty count n = n
+	Node x xs | count n = xs count | n + 1
+	xs count 0
+
+Empty len'' = 0
+Node _ xs | len'' = 1 + xs len''
+
+xs len''' = xs map const 1 | sum
+
+xs len'''' = xs zip [1..] last fst
+-}

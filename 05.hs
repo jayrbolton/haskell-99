@@ -23,4 +23,15 @@ myReverse' = rec []
  rec rev (x:xs) = rec (x:rev) xs
 
 myReverse'' [] = []
-myReverse'' (x:xs) = myReverse xs ++ [x]
+myReverse'' (x:xs) = myReverse'' xs ++ [x]
+
+{-
+xs rev = xs reversed
+xs rev' =
+	Empty recurse reversed = reversed
+	Node x xs | recurse reversed = xs recurse | reversed push x 
+	xs recurse Empty
+
+[] rev'' = [] # List.Empty
+Node x xs | rev'' = xs rev'' | append x
+-}

@@ -22,3 +22,10 @@ myButLast = last . init
 myButLast' (x:xs)
  | length xs == 1 = x
  | otherwise = myButLastR xs
+
+{-
+xs but_last = xs init last
+
+Node x Elem y | but_last' = x
+Node x xs | but_last' = xs but_last'
+-}

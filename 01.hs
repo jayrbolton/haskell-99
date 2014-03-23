@@ -21,3 +21,8 @@ myLast = last
 
 myLast' (x:[]) = x
 myLast' (x:xs) = myLast' xs
+
+{-
+\(Elem x) last | x
+\(Node x xs) last | xs last
+ -}

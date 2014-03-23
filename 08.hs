@@ -23,3 +23,10 @@ compress (x:[]) = [x]
 compress (x:y:xs)
 	| x == y = compress (y:xs)
 	| otherwise = x:(compress (y:xs))
+
+{-
+x:[] | compress = [x]
+x:y:xs | compress =
+	case x == y | y:xs compress
+	else        | x: | y:xs compress
+-}
