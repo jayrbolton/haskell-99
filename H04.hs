@@ -13,7 +13,7 @@ Prelude> myLength "Hello, world!"
 13
 -}
 
-module Four (myLength) where
+module H04 (myLength) where
 
 myLength = length
 

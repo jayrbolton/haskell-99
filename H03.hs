@@ -17,7 +17,7 @@ Prelude> elementAt "haskell" 5
 'e'
 -}
 
-module Three (elementAt) where
+module H03 (elementAt) where
 
 elementAt ls i = ls !! (i - 1)
 

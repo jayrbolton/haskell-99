@@ -15,8 +15,8 @@ encode "aaaabccaadeeee"
 [(4,'a'),(1,'b'),(2,'c'),(2,'a'),(1,'d'),(4,'e')]
 -}
 
-module Ten (encode) where
-import Nine (pack)
+module H10 (encode) where
+import H09 (pack)
 
 encode xs = map (tuple_compose head length) $ pack xs
 

@@ -13,7 +13,7 @@ Prelude> myReverse [1,2,3,4]
 [4,3,2,1]
 -}
 
-module Five (myReverse) where
+module H05 (myReverse) where
 
 myReverse = reverse
 

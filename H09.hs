@@ -15,7 +15,7 @@ Example in Haskell:
 ["aaaa","b","cc","aa","d","eeee"]
 -}
 
-module Nine (pack) where
+module H09 (pack) where
 
 pack xs = foldr f [] xs
 	where

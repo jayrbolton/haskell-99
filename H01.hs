@@ -15,7 +15,7 @@ Prelude> myLast ['x','y','z']
 'z'
 -}
 
-module One (myLast) where
+module H01 (myLast) where
 
 myLast = last 
 

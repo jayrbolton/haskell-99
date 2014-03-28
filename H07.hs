@@ -26,7 +26,7 @@ We have to define a new data type, because lists in Haskell are homogeneous.
 
 -- List [(Elem 5)]
 
-module Seven (flatten) where
+module H07 (flatten) where
 
 data NestedList a = Elem a | List [NestedList a]
 

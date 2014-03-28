@@ -15,7 +15,7 @@ Prelude> myButLast ['a'..'z']
 'y'
 -}
 
-module Two (myButLast) where
+module H02 (myButLast) where
 
 myButLast = last . init
 

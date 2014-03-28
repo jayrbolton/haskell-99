@@ -15,7 +15,7 @@ True
 True
 -}
 
-module Six (isPalindrome) where
+module H06 (isPalindrome) where
 
 isPalindrome xs = xs == reverse xs
 

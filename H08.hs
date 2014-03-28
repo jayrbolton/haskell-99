@@ -17,7 +17,7 @@ Example in Haskell:
 "abcade"
 -}
 
-module Eight (compress) where
+module H08 (compress) where
 
 compress (x:[]) = [x]
 compress (x:y:xs)
