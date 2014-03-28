@@ -14,11 +14,10 @@ Example:
 Example in Haskell:
 
 P11> encodeModified "aaaabccaadeeee"
-[Multiple 4 'a',Single 'b',Multiple 2 'c',
- Multiple 2 'a',Single 'd',Multiple 4 'e']
+[Multiple 4 'a',Single 'b',Multiple 2 'c', Multiple 2 'a',Single 'd',Multiple 4 'e']
 -}
 
-module H11 (encodeModified) where
+module H11 (encodeModified, Encoded(..)) where
 import H10 (encode)
 
 data Encoded a = Multiple Int a | Single a
@@ -32,6 +31,7 @@ encodeModified s = map convert $ encode s
 
 {-
 \s encodeModified =
-	\(n, c) convert = if n eq? 1 | Single c | Multiple n c
+	\(c, 1) convert = Single c
+	\(c, n) convert = Multiple n c
 	s encode map convert
 -}
