@@ -23,3 +23,7 @@ dropEvery xs n = rec xs n 1
 	rec (x:xs) n count
 	 | count `mod` n == 0 = rec xs n (count + 1)
 	 | otherwise = x : rec xs n (count + 1)
+
+dropEvery' xs n
+	| length xs < n = xs
+	| otherwise = take (n - 1) xs ++ dropEvery' (drop n xs) n
