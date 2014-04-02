@@ -30,12 +30,59 @@ module H07 (flatten) where
 
 data NestedList a = Elem a | List [NestedList a]
 
-flatten (Elem a) = [a]
+flatten (Elem x) = [x]
 flatten (List []) = []
-flatten (List (x:xs)) = flatten x ++ flatten (List xs)
+flatten (List (x:xs)) = append (flatten x) (flatten (List xs))
+
+append [] ys = ys
+append xs [] = xs
+append (x:xs) ys = x : append xs ys
+
+-- without any append operation whatsoever, try some extra pattern matching
+
+flatten' = reverse . rec []
+	where
+	rec acc (List []) = acc
+	rec acc (Elem x)  = x : acc
+	rec acc (List (x:xs)) = rec (rec acc x) (List xs)
 
 {-
 [] flatten = []
 [x] flatten = [x]
 x:xs flatten = x flatten concat | xs flatten
+
+let flatten
+
+let sum_prod: add | prod Pair
+# 1 2 Pair sum_prod 
+# -> Pair{1 2}
+
+let sum: fold +
+# 1 2 3 4 List sum
+# -> 10
+
+fold _ z on Empty = z
+
+fold func z on List = x (fold f z) f
+
+@fold _ z    when Empty = z
+with ls let func z = x.func | @fold f z
+
+with Empty
+fold f z: z
+
+with List
+fold f z: fst | rest fold f z | f
+
+f 5 (g "hello") 3
+f (g 3 4)
+
+5 | "hello" g | 3 f
+
+let average : add, div 2.0
+
+f 5 | g "hello" 3
+
+average a b = a + b | / 2.0  
+
 -}
