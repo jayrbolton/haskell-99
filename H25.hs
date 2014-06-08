@@ -1,6 +1,6 @@
 {-
-24.
-4/5/14
+25.
+6.7.2014
 jayrbolton
 
 Generate a random permutation of the elements of a list.
