@@ -13,7 +13,6 @@ Example in Haskell:
 -}
 
 module H26 (combinations) where
-import System.Random
 
 combinations 0 _ = [[]]
 combinations _ [] = []
