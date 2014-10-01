@@ -26,7 +26,7 @@ import H26 (combinations)
 
 groupz _ [] = [[]]
 groupz [] _ = [[]]
-groupz (g:gs) xs = [first : rest | first <- combinations g xs, rest <- groupz gs (xs \\ first)]
+groupz (n:ns) xs = [g:rest | g <- combinations n xs, rest <- groupz ns (g \\ xs)]
 
 {-
 kireji:
